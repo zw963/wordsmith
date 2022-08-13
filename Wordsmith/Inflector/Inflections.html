@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 1.4.1">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="Wordsmith">
+
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+  <meta name="repository-name" content="Wordsmith">
+  <title>Wordsmith::Inflector::Inflections - Wordsmith main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          Wordsmith
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="Wordsmith/Wordsmith" data-name="wordsmith">
+      <a href="../../Wordsmith.html">Wordsmith</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="Wordsmith/Wordsmith/Inflector" data-name="wordsmith::inflector">
+      <a href="../../Wordsmith/Inflector.html">Inflector</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="Wordsmith/Wordsmith/Inflector/Inflections" data-name="wordsmith::inflector::inflections">
+      <a href="../../Wordsmith/Inflector/Inflections.html">Inflections</a>
+      
+        <ul>
+  
+  <li class=" " data-id="Wordsmith/Wordsmith/Inflector/Inflections/Uncountables" data-name="wordsmith::inflector::inflections::uncountables">
+      <a href="../../Wordsmith/Inflector/Inflections/Uncountables.html">Uncountables</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Wordsmith::Inflector::Inflections
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Wordsmith/Inflector/Inflections.html">Wordsmith::Inflector::Inflections</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Create and manipulate the set of valid Wordsmith inflections.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L14" target="_blank">
+        wordsmith/inflector/inflections.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+          <div class="summary"><p>Create a new object to store the collection of inflectable words and patterns.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#acronym%28word%29-instance-method" class="signature"><strong>#acronym</strong>(word)</a>
+        
+          <div class="summary"><p>Define a new acronym that should be recognized.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#acronym_regex%3ARegex-instance-method" class="signature"><strong>#acronym_regex</strong> : Regex</a>
+        
+          <div class="summary"><p>Return the current set of acronym <code>Regex</code> patterns to recognize.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#acronyms%3AHash%28String%2CString%29-instance-method" class="signature"><strong>#acronyms</strong> : Hash(String, String)</a>
+        
+          <div class="summary"><p>Return the current set of acronym strings to recognize.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#clear%28scope%3D%3Aall%29-instance-method" class="signature"><strong>#clear</strong>(scope = <span class="n">:all</span>)</a>
+        
+          <div class="summary"><p>Remove all currently-stored Inflection rules, or a subset of rules.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#human%28rule%3AString%7CRegex%2Creplacement%3AString%29-instance-method" class="signature"><strong>#human</strong>(rule : String | Regex, replacement : String)</a>
+        
+          <div class="summary"><p>Define a new humanize rule, either using a pattern or string.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#humans%3AHash%28Regex%2CString%29-instance-method" class="signature"><strong>#humans</strong> : Hash(Regex, String)</a>
+        
+          <div class="summary"><p>Return the current set of items that can be humanized.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#irregular%28singular%3AString%2Cplural%3AString%29-instance-method" class="signature"><strong>#irregular</strong>(singular : String, plural : String)</a>
+        
+          <div class="summary"><p>Define a new irregular <code>String</code> with a direct translation between singular and plural form.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#plural%28rule%3AString%7CRegex%2Creplacement%3AString%29-instance-method" class="signature"><strong>#plural</strong>(rule : String | Regex, replacement : String)</a>
+        
+          <div class="summary"><p>Define a new pluralization rule, either using a pattern or string.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#plurals%3AHash%28Regex%2CString%29-instance-method" class="signature"><strong>#plurals</strong> : Hash(Regex, String)</a>
+        
+          <div class="summary"><p>Return the current set of matched pluralization patterns.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#singular%28rule%3AString%7CRegex%2Creplacement%3AString%29-instance-method" class="signature"><strong>#singular</strong>(rule : String | Regex, replacement : String)</a>
+        
+          <div class="summary"><p>Define a new singularization rule, either using a pattern or string.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#singulars%3AHash%28Regex%2CString%29-instance-method" class="signature"><strong>#singulars</strong> : Hash(Regex, String)</a>
+        
+          <div class="summary"><p>Return the current set of matched singularization patterns.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#uncountable%28%2Awords%29-instance-method" class="signature"><strong>#uncountable</strong>(*words)</a>
+        
+          <div class="summary"><p>Define a new uncountable <code>String</code> that should stay the same between singular and plural form.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#uncountables%3AWordsmith%3A%3AInflector%3A%3AInflections%3A%3AUncountables-instance-method" class="signature"><strong>#uncountables</strong> : Wordsmith::Inflector::Inflections::Uncountables</a>
+        
+          <div class="summary"><p>Return the current set of items considered uncountable.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a new object to store the collection of inflectable words and patterns.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L74" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="acronym(word)-instance-method">
+      <div class="signature">
+        
+        def <strong>acronym</strong>(word)
+
+        <a class="method-permalink" href="#acronym%28word%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Define a new acronym that should be recognized.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.inflections.acronym(<span class="s">&quot;API&quot;</span>)
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.camelize(<span class="s">&quot;API&quot;</span>)   <span class="c"># =&gt; &quot;API&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.underscore(<span class="s">&quot;API&quot;</span>) <span class="c"># =&gt; &quot;api&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.humanize(<span class="s">&quot;API&quot;</span>)   <span class="c"># =&gt; &quot;API&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.titleize(<span class="s">&quot;API&quot;</span>)   <span class="c"># =&gt; &quot;API&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L93" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="acronym_regex:Regex-instance-method">
+      <div class="signature">
+        
+        def <strong>acronym_regex</strong> : Regex
+
+        <a class="method-permalink" href="#acronym_regex%3ARegex-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Return the current set of acronym <code>Regex</code> patterns to recognize.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L71" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="acronyms:Hash(String,String)-instance-method">
+      <div class="signature">
+        
+        def <strong>acronyms</strong> : Hash(String, String)
+
+        <a class="method-permalink" href="#acronyms%3AHash%28String%2CString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Return the current set of acronym strings to recognize.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="clear(scope=:all)-instance-method">
+      <div class="signature">
+        
+        def <strong>clear</strong>(scope = <span class="n">:all</span>)
+
+        <a class="method-permalink" href="#clear%28scope%3D%3Aall%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Remove all currently-stored Inflection rules, or a subset of rules.</p>
+<p>Subsets can be provided with the <code>scope</code> parameter, and can be any of:</p>
+<ul>
+<li><code>:all</code></li>
+<li><code>:plurals</code></li>
+<li><code>:singulars</code></li>
+<li><code>:uncountables</code></li>
+<li><code>:humans</code></li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L226" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="human(rule:String|Regex,replacement:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>human</strong>(rule : String | Regex, replacement : String)
+
+        <a class="method-permalink" href="#human%28rule%3AString%7CRegex%2Creplacement%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Define a new humanize rule, either using a pattern or string.</p>
+<p>Example with a <code>Regex</code> pattern:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.inflections.human(<span class="s">/^prefix_/</span>i, <span class="s">&quot;\\1&quot;</span>)
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.humanize(<span class="s">&quot;prefix_request&quot;</span>) <span class="c"># =&gt; &quot;Request&quot;</span></code></pre>
+<p>Example with a <code>String</code>:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.inflections.human(<span class="s">&quot;col_rpted_bugs&quot;</span>, <span class="s">&quot;Reported bugs&quot;</span>)
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.humanize(<span class="s">&quot;col_rpted_bugs&quot;</span>) <span class="c"># =&gt; &quot;Reported bugs&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L213" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="humans:Hash(Regex,String)-instance-method">
+      <div class="signature">
+        
+        def <strong>humans</strong> : Hash(Regex, String)
+
+        <a class="method-permalink" href="#humans%3AHash%28Regex%2CString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Return the current set of items that can be humanized.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="irregular(singular:String,plural:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>irregular</strong>(singular : String, plural : String)
+
+        <a class="method-permalink" href="#irregular%28singular%3AString%2Cplural%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Define a new irregular <code>String</code> with a direct translation between singular and plural form.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.inflections.irregular(<span class="s">&quot;person&quot;</span>, <span class="s">&quot;people&quot;</span>)
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.singularize(<span class="s">&quot;people&quot;</span>) <span class="c"># =&gt; &quot;person&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.pluralize(<span class="s">&quot;person&quot;</span>)   <span class="c"># =&gt; &quot;people&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L152" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="plural(rule:String|Regex,replacement:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>plural</strong>(rule : String | Regex, replacement : String)
+
+        <a class="method-permalink" href="#plural%28rule%3AString%7CRegex%2Creplacement%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Define a new pluralization rule, either using a pattern or string.</p>
+<p>Example with a <code>Regex</code> pattern:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.inflections.plural(<span class="s">/^goose(\S*)$/</span>i, <span class="s">&quot;geese\\1&quot;</span>)
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.pluralize(<span class="s">&quot;goosebumps&quot;</span>) <span class="c"># =&gt; &quot;geesebumps&quot;</span></code></pre>
+<p>Example with a <code>String</code>:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.inflections.plural(<span class="s">&quot;goosebumps&quot;</span>, <span class="s">&quot;geesebumps&quot;</span>)
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.pluralize(<span class="s">&quot;goosebumps&quot;</span>) <span class="c"># =&gt; &quot;geesebumps&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L111" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="plurals:Hash(Regex,String)-instance-method">
+      <div class="signature">
+        
+        def <strong>plurals</strong> : Hash(Regex, String)
+
+        <a class="method-permalink" href="#plurals%3AHash%28Regex%2CString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Return the current set of matched pluralization patterns.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="singular(rule:String|Regex,replacement:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>singular</strong>(rule : String | Regex, replacement : String)
+
+        <a class="method-permalink" href="#singular%28rule%3AString%7CRegex%2Creplacement%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Define a new singularization rule, either using a pattern or string.</p>
+<p>Example with a <code>Regex</code> pattern:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.inflections.singular(<span class="s">/^(ox)en$/</span>i, <span class="s">&quot;\\1&quot;</span>)
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.singularize(<span class="s">&quot;oxen&quot;</span>) <span class="c"># =&gt; &quot;ox&quot;</span></code></pre>
+<p>Example with a <code>String</code>:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.inflections.singular(<span class="s">&quot;mice&quot;</span>, <span class="s">&quot;mouse&quot;</span>)
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.singularize(<span class="s">&quot;mice&quot;</span>) <span class="c"># =&gt; &quot;mouse&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L134" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="singulars:Hash(Regex,String)-instance-method">
+      <div class="signature">
+        
+        def <strong>singulars</strong> : Hash(Regex, String)
+
+        <a class="method-permalink" href="#singulars%3AHash%28Regex%2CString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Return the current set of matched singularization patterns.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L59" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="uncountable(*words)-instance-method">
+      <div class="signature">
+        
+        def <strong>uncountable</strong>(*words)
+
+        <a class="method-permalink" href="#uncountable%28%2Awords%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Define a new uncountable <code>String</code> that should stay the same between singular and plural form.</p>
+<p>Example with a single <code>String</code>:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.inflections.uncountable(<span class="s">&quot;jedi&quot;</span>)
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.singularize(<span class="s">&quot;jedi&quot;</span>) <span class="c"># =&gt; &quot;jedi&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.pluralize(<span class="s">&quot;jedi&quot;</span>)   <span class="c"># =&gt; &quot;jedi&quot;</span></code></pre>
+<p>Example with a single <code>String</code>:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.inflections.uncountable(<span class="s">%w(fish jedi)</span>)
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.singularize(<span class="s">&quot;jedi&quot;</span>) <span class="c"># =&gt; &quot;jedi&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.pluralize(<span class="s">&quot;fish&quot;</span>)   <span class="c"># =&gt; &quot;fish&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L196" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="uncountables:Wordsmith::Inflector::Inflections::Uncountables-instance-method">
+      <div class="signature">
+        
+        def <strong>uncountables</strong> : <a href="../../Wordsmith/Inflector/Inflections/Uncountables.html">Wordsmith::Inflector::Inflections::Uncountables</a>
+
+        <a class="method-permalink" href="#uncountables%3AWordsmith%3A%3AInflector%3A%3AInflections%3A%3AUncountables-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Return the current set of items considered uncountable.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

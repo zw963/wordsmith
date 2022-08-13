@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 1.4.1">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="Wordsmith">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="Wordsmith">
+  <title>Wordsmith::Inflector - Wordsmith main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          Wordsmith
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="Wordsmith/Wordsmith" data-name="wordsmith">
+      <a href="../Wordsmith.html">Wordsmith</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="Wordsmith/Wordsmith/Inflector" data-name="wordsmith::inflector">
+      <a href="../Wordsmith/Inflector.html">Inflector</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="Wordsmith/Wordsmith/Inflector/Inflections" data-name="wordsmith::inflector::inflections">
+      <a href="../Wordsmith/Inflector/Inflections.html">Inflections</a>
+      
+        <ul>
+  
+  <li class=" " data-id="Wordsmith/Wordsmith/Inflector/Inflections/Uncountables" data-name="wordsmith::inflector::inflections::uncountables">
+      <a href="../Wordsmith/Inflector/Inflections/Uncountables.html">Uncountables</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Wordsmith::Inflector
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="extended-modules" class="anchor" href="#extended-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Extended Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../Wordsmith/Inflector.html">Wordsmith::Inflector</a></li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L2" target="_blank">
+        wordsmith/inflector/inflections.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L4" target="_blank">
+        wordsmith/inflector/methods.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#camelize%28term%2Cuppercase_first_letter%3Dtrue%29-instance-method" class="signature"><strong>#camelize</strong>(term, uppercase_first_letter = <span class="n">true</span>)</a>
+        
+          <div class="summary"><p>Convert a given word to the camel-case version of that word.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#classify%28table_name%29-instance-method" class="signature"><strong>#classify</strong>(table_name)</a>
+        
+          <div class="summary"><p>Convert a given table name to the class name for that table.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dasherize%28underscored_word%29-instance-method" class="signature"><strong>#dasherize</strong>(underscored_word)</a>
+        
+          <div class="summary"><p>Convert a given underscore-separated word to the same word, separated by dashes.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#deconstantize%28path%29-instance-method" class="signature"><strong>#deconstantize</strong>(path)</a>
+        
+          <div class="summary"><p>Remove any trailing constants from the provided path.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#demodulize%28path%29-instance-method" class="signature"><strong>#demodulize</strong>(path)</a>
+        
+          <div class="summary"><p>Remove leading modules from a provided class name path.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#foreign_key%28class_name%2Cseparate_class_name_and_id_with_underscore%3Dtrue%29-instance-method" class="signature"><strong>#foreign_key</strong>(class_name, separate_class_name_and_id_with_underscore = <span class="n">true</span>)</a>
+        
+          <div class="summary"><p>Determine the foreign key representation of a given class name.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#humanize%28lower_case_and_underscored_word%2Ccapitalize%3Dtrue%2Ckeep_id_suffix%3Dfalse%29-instance-method" class="signature"><strong>#humanize</strong>(lower_case_and_underscored_word, capitalize = <span class="n">true</span>, keep_id_suffix = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Convert a given word to the human-friendly version of that word.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inflections-instance-method" class="signature"><strong>#inflections</strong></a>
+        
+          <div class="summary"><p>Return the current set of stored inflection logic.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ordinal%28number%29-instance-method" class="signature"><strong>#ordinal</strong>(number)</a>
+        
+          <div class="summary"><p>Determine the ordinal suffix for a given number.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ordinalize%28number%29-instance-method" class="signature"><strong>#ordinalize</strong>(number)</a>
+        
+          <div class="summary"><p>Given a number, return the number with the correct ordinal suffix.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parameterize%28content%3AString%2Cseparator%3AString%3F%3D%22-%22%2Cpreserve_case%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#parameterize</strong>(content : String, separator : String? = <span class="s">&quot;-&quot;</span>, preserve_case : Bool = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Convert the given string to a parameter-friendly version.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pluralize%28word%29-instance-method" class="signature"><strong>#pluralize</strong>(word)</a>
+        
+          <div class="summary"><p>Given a word, return the plural version of that word.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#singularize%28word%29-instance-method" class="signature"><strong>#singularize</strong>(word)</a>
+        
+          <div class="summary"><p>Given a word, return the singular version of that word.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tableize%28class_name%29-instance-method" class="signature"><strong>#tableize</strong>(class_name)</a>
+        
+          <div class="summary"><p>Convert a given class name to the database table name for that class.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#titleize%28word%2Ckeep_id_suffix%3Dfalse%29-instance-method" class="signature"><strong>#titleize</strong>(word, keep_id_suffix = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Convert a given word to the titleized version of that word, which generally means each word is capitalized.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#underscore%28camel_cased_word%29-instance-method" class="signature"><strong>#underscore</strong>(camel_cased_word)</a>
+        
+          <div class="summary"><p>Convert a given camel-case word to the underscored version of that word.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#upcase_first%28string%29-instance-method" class="signature"><strong>#upcase_first</strong>(string)</a>
+        
+          <div class="summary"><p>Capitalize the first letter of a given word.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="camelize(term,uppercase_first_letter=true)-instance-method">
+      <div class="signature">
+        
+        def <strong>camelize</strong>(term, uppercase_first_letter = <span class="n">true</span>)
+
+        <a class="method-permalink" href="#camelize%28term%2Cuppercase_first_letter%3Dtrue%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert a given word to the camel-case version of that word.</p>
+<p>Optionally, a second parameter can be provided that controls whether or not the first letter is capitalized.</p>
+<p>Examples:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.camelize(<span class="s">&quot;application_controller&quot;</span>)                                <span class="c"># =&gt; &quot;ApplicationController&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.camelize(<span class="s">&quot;application_controller&quot;</span>, uppercase_first_letter: <span class="n">false</span>) <span class="c"># =&gt; &quot;applicationController&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L40" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="classify(table_name)-instance-method">
+      <div class="signature">
+        
+        def <strong>classify</strong>(table_name)
+
+        <a class="method-permalink" href="#classify%28table_name%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert a given table name to the class name for that table.</p>
+<p>Examples:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.classify(<span class="s">&quot;users&quot;</span>)               <span class="c"># =&gt; &quot;User&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.classify(<span class="s">&quot;people&quot;</span>)              <span class="c"># =&gt; &quot;Person&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.classify(<span class="s">&quot;schema.users&quot;</span>)        <span class="c"># =&gt; &quot;User&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.classify(<span class="s">&quot;schema.public.users&quot;</span>) <span class="c"># =&gt; &quot;User&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L156" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dasherize(underscored_word)-instance-method">
+      <div class="signature">
+        
+        def <strong>dasherize</strong>(underscored_word)
+
+        <a class="method-permalink" href="#dasherize%28underscored_word%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert a given underscore-separated word to the same word, separated by dashes.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.dasherize(<span class="s">&quot;post_office&quot;</span>) <span class="c"># =&gt; &quot;post-office&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L167" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="deconstantize(path)-instance-method">
+      <div class="signature">
+        
+        def <strong>deconstantize</strong>(path)
+
+        <a class="method-permalink" href="#deconstantize%28path%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Remove any trailing constants from the provided path.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.deconstantize(<span class="s">&quot;Helpers::Mixins::User::FREE_TIER_COMMENTS&quot;</span>) <span class="c"># =&gt; &quot;Helpers::Mixins::User&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L192" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="demodulize(path)-instance-method">
+      <div class="signature">
+        
+        def <strong>demodulize</strong>(path)
+
+        <a class="method-permalink" href="#demodulize%28path%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Remove leading modules from a provided class name path.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.demodulize(<span class="s">&quot;Helpers::Mixins::User&quot;</span>) <span class="c"># =&gt; &quot;User&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L177" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="foreign_key(class_name,separate_class_name_and_id_with_underscore=true)-instance-method">
+      <div class="signature">
+        
+        def <strong>foreign_key</strong>(class_name, separate_class_name_and_id_with_underscore = <span class="n">true</span>)
+
+        <a class="method-permalink" href="#foreign_key%28class_name%2Cseparate_class_name_and_id_with_underscore%3Dtrue%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Determine the foreign key representation of a given class name.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.foreign_key(<span class="s">&quot;Person&quot;</span>) <span class="c"># =&gt; &quot;person_id&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L202" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="humanize(lower_case_and_underscored_word,capitalize=true,keep_id_suffix=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>humanize</strong>(lower_case_and_underscored_word, capitalize = <span class="n">true</span>, keep_id_suffix = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#humanize%28lower_case_and_underscored_word%2Ccapitalize%3Dtrue%2Ckeep_id_suffix%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert a given word to the human-friendly version of that word.</p>
+<p>Capitalization and whether or not to retain an <code>_id</code> suffix can be controlled with optional parameters.</p>
+<p>Examples:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.humanize(<span class="s">&quot;employee_id&quot;</span>)                       <span class="c"># =&gt; &quot;Employee&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.humanize(<span class="s">&quot;employee_id&quot;</span>, capitalize: <span class="n">false</span>)    <span class="c"># =&gt; &quot;employee&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.humanize(<span class="s">&quot;employee_id&quot;</span>, keep_id_suffix: <span class="n">true</span>) <span class="c"># =&gt; &quot;Employee id&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L87" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inflections-instance-method">
+      <div class="signature">
+        
+        def <strong>inflections</strong>
+
+        <a class="method-permalink" href="#inflections-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Return the current set of stored inflection logic.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/inflections.cr#L9" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ordinal(number)-instance-method">
+      <div class="signature">
+        
+        def <strong>ordinal</strong>(number)
+
+        <a class="method-permalink" href="#ordinal%28number%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Determine the ordinal suffix for a given number.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.ordinal(<span class="n">1</span>) <span class="c"># =&gt; &quot;st&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.ordinal(<span class="n">2</span>) <span class="c"># =&gt; &quot;nd&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.ordinal(<span class="n">3</span>) <span class="c"># =&gt; &quot;rd&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.ordinal(<span class="n">4</span>) <span class="c"># =&gt; &quot;th&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L215" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ordinalize(number)-instance-method">
+      <div class="signature">
+        
+        def <strong>ordinalize</strong>(number)
+
+        <a class="method-permalink" href="#ordinalize%28number%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Given a number, return the number with the correct ordinal suffix.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.ordinalize(<span class="n">1</span>) <span class="c"># =&gt; &quot;1st&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.ordinalize(<span class="n">2</span>) <span class="c"># =&gt; &quot;2nd&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.ordinalize(<span class="n">3</span>) <span class="c"># =&gt; &quot;3rd&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.ordinalize(<span class="n">4</span>) <span class="c"># =&gt; &quot;4th&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L239" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parameterize(content:String,separator:String?=&quot;-&quot;,preserve_case:Bool=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>parameterize</strong>(content : String, separator : String? = <span class="s">&quot;-&quot;</span>, preserve_case : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#parameterize%28content%3AString%2Cseparator%3AString%3F%3D%22-%22%2Cpreserve_case%3ABool%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert the given string to a parameter-friendly version.</p>
+<p>The used separator and whether or not to preserve the original object case can be controlled through optional parameters.</p>
+<p>Examples:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.parameterize(<span class="s">&quot;Admin/product&quot;</span>)                       <span class="c"># =&gt; &quot;admin-product&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.parameterize(<span class="s">&quot;Admin::Product&quot;</span>, separator: <span class="s">&quot;_&quot;</span>)      <span class="c"># =&gt; &quot;admin_product&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.parameterize(<span class="s">&quot;Admin::Product&quot;</span>, preserve_case: <span class="n">true</span>) <span class="c"># =&gt; &quot;Admin-Product&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L253" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pluralize(word)-instance-method">
+      <div class="signature">
+        
+        def <strong>pluralize</strong>(word)
+
+        <a class="method-permalink" href="#pluralize%28word%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Given a word, return the plural version of that word.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.pluralize(<span class="s">&quot;sandal&quot;</span>) <span class="c"># =&gt; &quot;sandals&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.pluralize(<span class="s">&quot;person&quot;</span>) <span class="c"># =&gt; &quot;people&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.pluralize(<span class="s">&quot;people&quot;</span>) <span class="c"># =&gt; &quot;people&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="singularize(word)-instance-method">
+      <div class="signature">
+        
+        def <strong>singularize</strong>(word)
+
+        <a class="method-permalink" href="#singularize%28word%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Given a word, return the singular version of that word.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.singularize(<span class="s">&quot;sandals&quot;</span>) <span class="c"># =&gt; &quot;sandal&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.singularize(<span class="s">&quot;people&quot;</span>)  <span class="c"># =&gt; &quot;person&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.singularize(<span class="s">&quot;person&quot;</span>)  <span class="c"># =&gt; &quot;person&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L27" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tableize(class_name)-instance-method">
+      <div class="signature">
+        
+        def <strong>tableize</strong>(class_name)
+
+        <a class="method-permalink" href="#tableize%28class_name%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert a given class name to the database table name for that class.</p>
+<p>Examples:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.tableize(<span class="s">&quot;User&quot;</span>)   <span class="c"># =&gt; &quot;users&quot;</span>
+<span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.tableize(<span class="s">&quot;Person&quot;</span>) <span class="c"># =&gt; &quot;people&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L143" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="titleize(word,keep_id_suffix=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>titleize</strong>(word, keep_id_suffix = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#titleize%28word%2Ckeep_id_suffix%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert a given word to the titleized version of that word, which generally means each word is capitalized.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.titleize(<span class="s">&quot;amazon web services&quot;</span>) <span class="c"># =&gt; &quot;Amazon Web Services&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L130" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="underscore(camel_cased_word)-instance-method">
+      <div class="signature">
+        
+        def <strong>underscore</strong>(camel_cased_word)
+
+        <a class="method-permalink" href="#underscore%28camel_cased_word%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert a given camel-case word to the underscored version of that word.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.underscore(<span class="s">&quot;ApplicationController&quot;</span>) <span class="c"># =&gt; &quot;application_controller&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L64" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="upcase_first(string)-instance-method">
+      <div class="signature">
+        
+        def <strong>upcase_first</strong>(string)
+
+        <a class="method-permalink" href="#upcase_first%28string%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Capitalize the first letter of a given word.</p>
+<p>Example:</p>
+<pre><code class="language-crystal"><span class="t">Wordsmith</span><span class="t">::</span><span class="t">Inflector</span>.upcase_first(<span class="s">&quot;lucky&quot;</span>) <span class="c"># =&gt; &quot;Lucky&quot;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/zw963/wordsmith/blob/d94022433b4c259d1dbdd548861d5d8fd7000259/src/wordsmith/inflector/methods.cr#L120" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
